@@ -97,6 +97,6 @@ if __name__ == "__main__":
 # We have a lovely Cat
 # It says meow
 # ====================
-# We have a lovely Cat
-# It says meow
+# We have a lovely Dog
+# It says woof
 # ====================

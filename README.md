@@ -56,19 +56,19 @@ __行为型设计模式__:
 | [template](behavioral/template.py) | an object imposes a structure but takes pluggable components |
 | [visitor](behavioral/visitor.py) | invoke a callback for all items of a collection |
 
-__Design for Testability Patterns__:
+__可测试性设计模式__:
 
 | Pattern | Description |
 |:-------:| ----------- |
 | [setter_injection](dft/setter_injection.py) | the client provides the depended-on object to the SUT via the setter injection (implementation variant of dependency injection) |
 
-__Fundamental Patterns__:
+__基础模式__:
 
 | Pattern | Description |
 |:-------:| ----------- |
 | [delegation_pattern](fundamental/delegation_pattern.py) | an object handles a request by delegating to a second object (the delegate) |
 
-__Others__:
+__其他__:
 
 | Pattern | Description |
 |:-------:| ----------- |
