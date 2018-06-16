@@ -13,7 +13,7 @@ __创建型设计模式__:
 
 | Pattern | Description |
 |:-------:| ----------- |
-| [abstract_factory](creational/abstract_factory.py) | use a generic function with specific factories |
+| [抽象工厂模式](creational/abstract_factory.py) | 将一个泛型函数和一些特定的工厂类结合使用。 |
 | [borg](creational/borg.py) | a singleton with shared-state among instances |
 | [builder](creational/builder.py) | instead of using multiple constructors, builder object receives parameters and returns constructed objects |
 | [factory_method](creational/factory_method.py) | delegate a specialized function/method to create instances |
