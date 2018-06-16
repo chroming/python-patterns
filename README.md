@@ -1,15 +1,15 @@
-python-patterns
+Python 设计模式
 ===============
 
-A collection of design patterns and idioms in Python.
+翻译自：[python-patterns](https://github.com/faif/python-patterns)。
 
-When an implementation is added or modified, be sure to update this file and
-rerun `append_output.sh` (eg. ./append_output.sh borg.py) to keep the output
-comments at the bottom up to date.
+Python 风格实现的设计模式合集。
 
-Current Patterns:
+若需添加新的设计模式实现或修改已有的实现，请及时更新此文件并运行`append_output.sh`（例如：../append_output.sh borg.py）以保持底部的`OUTPUT`注释为最新版。
 
-__Creational Patterns__:
+当前已有的设计模式：
+
+__创建型设计模式__:
 
 | Pattern | Description |
 |:-------:| ----------- |
@@ -21,7 +21,7 @@ __Creational Patterns__:
 | [pool](creational/pool.py) | preinstantiate and maintain a group of instances of the same type |
 | [prototype](creational/prototype.py) | use a factory and clones of a prototype for new instances (if instantiation is expensive) |
 
-__Structural Patterns__:
+__结构型设计模式__:
 
 | Pattern | Description |
 |:-------:| ----------- |
@@ -36,7 +36,7 @@ __Structural Patterns__:
 | [mvc](structural/mvc.py) | model<->view<->controller (non-strict relationships) |
 | [proxy](structural/proxy.py) | an object funnels operations to something else |
 
-__Behavioral Patterns__:
+__行为型设计模式__:
 
 | Pattern | Description |
 |:-------:| ----------- |
