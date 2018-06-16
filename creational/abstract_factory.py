@@ -2,35 +2,29 @@
 # -*- coding: utf-8 -*-
 
 """
-*What is this pattern about?
+*用途
 
-In Java and other languages, the Abstract Factory Pattern serves to provide an interface for
-creating related/dependent objects without need to specify their
-actual class.
+在 Java 和其他语言中，抽象工厂模式是为了提供用于创建关联型/依赖型对象的接口，而不需要直接指定他们的具体类。
 
-The idea is to abstract the creation of objects depending on business
-logic, platform choice, etc.
+此模式的主要思想是抽象出可根据不同业务逻辑，平台等创建出不同的对象。
 
-In Python, the interface we use is simply a callable, which is "builtin" interface
-in Python, and in normal circumstances we can simply use the class itself as
-that callable, because classes are first class objects in Python.
+在 Python 中，我们使用的默认接口仅仅是一个可调用对象，并且在通常情况下我们可以简单地将类本身作为此可调用对象，因为类是 Python 中的一等公民。
 
-*What does this example do?
-This particular implementation abstracts the creation of a pet and
-does so depending on the factory we chose (Dog or Cat, or random_animal)
-This works because both Dog/Cat and random_animal respect a common
-interface (callable for creation and .speak()).
-Now my application can create pets abstractly and decide later,
-based on my own criteria, dogs over cats.
+* 例子含义
 
-*Where is the pattern used practically?
+此示例实现了根据我们的选择（ Dog 或 Cat ，或 random_animal） ，创建 pet 和其行为的抽象类。
+这种方式能正常运行是因为 Dog 和 Cat 均实现了相同的接口（可被创建者调用及 .speak() 方法）。
+现在我的程序可以抽象地创建宠物，之后再根据我自己的标准创建 dogs 或 cats 。
 
-*References:
+* 用处
+
+* 参考资料
 https://sourcemaking.com/design_patterns/abstract_factory
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 
-*TL;DR80
+* 一句话总结
 Provides a way to encapsulate a group of individual factories.
+提供了一个封装一组特定工厂类的方式。
 """
 
 import random
@@ -38,15 +32,15 @@ import random
 
 class PetShop(object):
 
-    """A pet shop"""
+    """一个宠物商店"""
 
     def __init__(self, animal_factory=None):
-        """pet_factory is our abstract factory.  We can set it at will."""
+        """pet_factory 是我们的抽象工厂，我们可以根据按需设定"""
 
         self.pet_factory = animal_factory
 
     def show_pet(self):
-        """Creates and shows a pet using the abstract factory"""
+        """使用抽象工厂创建并显示宠物"""
 
         pet = self.pet_factory()
         print("We have a lovely {}".format(pet))
@@ -71,23 +65,23 @@ class Cat(object):
         return "Cat"
 
 
-# Additional factories:
+# 额外的工厂:
 
-# Create a random animal
+# 创建一个随机宠物
 def random_animal():
-    """Let's be dynamic!"""
+    """动态选择"""
     return random.choice([Dog, Cat])()
 
 
-# Show pets with various factories
+# 显示各种宠物
 if __name__ == "__main__":
 
-    # A Shop that sells only cats
+    # 一个只卖猫的宠物店
     cat_shop = PetShop(Cat)
     cat_shop.show_pet()
     print("")
 
-    # A shop that sells random animals
+    # 一个卖随机宠物的宠物店
     shop = PetShop(random_animal)
     for i in range(3):
         shop.show_pet()
