@@ -19,7 +19,7 @@ __创建型设计模式__:
 | [工厂方法](creational/factory_method.py) | 委托特定函数/方法用于创建实例。 |
 | [lazy_evaluation](creational/lazy_evaluation.py) | lazily-evaluated property pattern in Python |
 | [pool](creational/pool.py) | preinstantiate and maintain a group of instances of the same type |
-| [prototype](creational/prototype.py) | use a factory and clones of a prototype for new instances (if instantiation is expensive) |
+| [原型模式](creational/prototype.py) | use a factory and clones of a prototype for new instances (if instantiation is expensive) 使用工厂和克隆品创建新实例（当实例化消耗较大时）。|
 
 __结构型设计模式__:
 

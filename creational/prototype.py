@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-*TL;DR80
-Creates new object instances by cloning prototype.
+* 一句话总结
+通过克隆原型创建新对象实例。
 """
 
 
@@ -12,8 +12,7 @@ class Prototype(object):
     value = 'default'
 
     def clone(self, **attrs):
-        """Clone a prototype and update inner attributes dictionary"""
-        # Python in Practice, Mark Summerfield
+        """克隆原型并更新内部属性字典"""
         obj = self.__class__()
         obj.__dict__.update(attrs)
         return obj
@@ -25,15 +24,15 @@ class PrototypeDispatcher(object):
         self._objects = {}
 
     def get_objects(self):
-        """Get all objects"""
+        """获取所有对象"""
         return self._objects
 
     def register_object(self, name, obj):
-        """Register an object"""
+        """注册对象"""
         self._objects[name] = obj
 
     def unregister_object(self, name):
-        """Unregister an object"""
+        """取消注册对象"""
         del self._objects[name]
 
 
