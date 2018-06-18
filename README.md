@@ -16,7 +16,7 @@ __创建型设计模式__:
 | [抽象工厂模式](creational/abstract_factory.py) | 将一个泛型函数和一些特定的工厂类结合使用。 |
 | [borg模式](creational/borg.py) | 在实例间共享状态的单例模式。 |
 | [builder](creational/builder.py) | instead of using multiple constructors, builder object receives parameters and returns constructed objects |
-| [factory_method](creational/factory_method.py) | delegate a specialized function/method to create instances |
+| [工厂方法](creational/factory_method.py) | 委托特定函数/方法用于创建实例。 |
 | [lazy_evaluation](creational/lazy_evaluation.py) | lazily-evaluated property pattern in Python |
 | [pool](creational/pool.py) | preinstantiate and maintain a group of instances of the same type |
 | [prototype](creational/prototype.py) | use a factory and clones of a prototype for new instances (if instantiation is expensive) |

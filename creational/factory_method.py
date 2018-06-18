@@ -1,41 +1,35 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""*What is this pattern about?
-The Factory Method pattern can be used to create an interface for a
-method, leaving the implementation to the class that gets
-instantiated.
+"""
+* 解释
+工厂方法模式可为方法创建接口，并将具体实例化过程交由类来实现。
 
-*What does this example do?
-The code shows a way to localize words in two languages: English and
-Greek. "getLocalizer" is the factory method that constructs a
-localizer depending on the language chosen. The localizer object will
-be an instance from a different class according to the language
-localized. However, the main code does not have to worry about which
-localizer will be instantiated, since the method "get" will be called
-in the same way independently of the language.
+* 例子含义
+示例代码展示了一种将本地语言翻译为英文和希腊文的方式。
+"getLocalizer" 是根据选择的语言构造相应翻译器实例的工厂方法。
+翻译器对象是与所选语言对应的类实例。
+然而，主函数不需要考虑应实例化哪个语言类，因为所有类都实现了 get 方法。
 
-*Where can the pattern be used practically?
-The Factory Method can be seen in the popular web framework Django:
-http://django.wikispaces.asu.edu/*NEW*+Django+Design+Patterns For
-example, in a contact form of a web page, the subject and the message
-fields are created using the same form factory (CharField()), even
-though they have different implementations according to their
-purposes.
 
-*References:
+* 用处
+流行的框架 Django 中用到了工厂方法模式：http://django.wikispaces.asu.edu/*NEW*+Django+Design+Patterns 。
+比如，在一个页面的联系人表单中，标题和信息字典使用了相同的表单工厂（CharField()），即使他们因目的不同有着不同的实现方式。
+
+* 参考资料
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 https://fkromer.github.io/python-pattern-references/design/#factory-method
 https://sourcemaking.com/design_patterns/factory_method
 
-*TL;DR80
-Creates objects without having to specify the exact class.
+* 一句话总结
+无需明确指定类即可创建特定对象。
+
 """
 
 
 class GreekGetter(object):
 
-    """A simple localizer a la gettext"""
+    """简单的希腊语翻译器类"""
 
     def __init__(self):
         self.trans = dict(dog="σκύλος", cat="γάτα")
@@ -47,22 +41,22 @@ class GreekGetter(object):
 
 class EnglishGetter(object):
 
-    """Simply echoes the msg ids"""
+    """单纯返回消息id"""
 
     def get(self, msgid):
         return str(msgid)
 
 
 def get_localizer(language="English"):
-    """The factory method"""
+    """工厂方法"""
     languages = dict(English=EnglishGetter, Greek=GreekGetter)
     return languages[language]()
 
 
 if __name__ == '__main__':
-    # Create our localizers
+    # 创建翻译器实例
     e, g = get_localizer(language="English"), get_localizer(language="Greek")
-    # Localize some text
+    # 翻译文字
     for msgid in "dog parrot cat bear".split():
         print(e.get(msgid), g.get(msgid))
 
