@@ -2,33 +2,24 @@
 # -*- coding: utf-8 -*-
 
 """
-*What is this pattern about?
-This pattern is used when creating an object is costly (and they are
-created frequently) but only a few are used at a time. With a Pool we
-can manage those instances we have as of now by caching them. Now it
-is possible to skip the costly creation of an object if one is
-available in the pool.
-A pool allows to 'check out' an inactive object and then to return it.
-If none are available the pool creates one to provide without wait.
+* 解释
+此模式用于创建一类对象的消耗较高时（且经常需要新建此对象）但同一时间只需使用一小部分对象的情况。
+使用一个对象池我们可以通过缓存机制管理当前已有的实例。当对象池中已有某个对象时我们就可以减少新建成本。
+一个对象池经常需要“检出”一个非活跃对象并返回它。当对象池为空时则直接新建对象。
 
-*What does this example do?
-In this example queue.Queue is used to create the pool (wrapped in a
-custom ObjectPool object to use with the with statement), and it is
-populated with strings.
-As we can see, the first string object put in "yam" is USED by the
-with statement. But because it is released back into the pool
-afterwards it is reused by the explicit call to sample_queue.get().
-Same thing happens with "sam", when the ObjectPool created insided the
-function is deleted (by the GC) and the object is returned.
+* 例子含义
+示例中 queue.Queue 用于创建对象池（使用一个自定义的 ObjectPool 对象使其支持 with 语法），并使用字符串填充它。
+我们可以看到，第一个字符串 “yam” 被 with 语法使用了，但因为它在被释放后会回到对象池中，
+它在随后的 sample_queue.get() 又重新出现了。“sam” 字符串同理。
 
-*Where is the pattern used practically?
+* 用处
 
-*References:
+* 参考资料
 http://stackoverflow.com/questions/1514120/python-implementation-of-the-object-pool-design-pattern
 https://sourcemaking.com/design_patterns/object_pool
 
-*TL;DR80
-Stores a set of initialized objects kept ready to use.
+* 一句话总结
+保存一系列已初始化的对象以便随时使用。
 """
 
 
@@ -57,7 +48,7 @@ class ObjectPool(object):
 def main():
     try:
         import queue
-    except ImportError:  # python 2.x compatibility
+    except ImportError:  # python 2.x 兼容写法
         import Queue as queue
 
     def test_object(queue):
