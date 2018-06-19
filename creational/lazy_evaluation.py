@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-Lazily-evaluated property pattern in Python.
-
+* 解释
+在 Python 中延迟计算属性。
 https://en.wikipedia.org/wiki/Lazy_evaluation
 
-*References:
+* 参考资料
 bottle
 https://github.com/bottlepy/bottle/blob/cafc15419cbb4a6cb748e6ecdccf92893bb25ce5/bottle.py#L270
 django
@@ -18,8 +18,9 @@ https://github.com/Pylons/pyramid/blob/7909e9503cdfc6f6e84d2c7ace1d3c03ca1d8b73/
 werkzeug
 https://github.com/pallets/werkzeug/blob/5a2bf35441006d832ab1ed5a31963cbc366c99ac/werkzeug/utils.py#L35
 
-*TL;DR80
-Delays the eval of an expr until its value is needed and avoids repeated evals.
+* 一句话总结
+延迟计算结果直到需要这个结果，并避免重复计算。
+
 """
 
 from __future__ import print_function

@@ -17,7 +17,7 @@ __创建型设计模式__:
 | [borg模式](creational/borg.py) | 在实例间共享状态的单例模式。 |
 | [builder](creational/builder.py) | instead of using multiple constructors, builder object receives parameters and returns constructed objects |
 | [工厂方法](creational/factory_method.py) | 委托特定函数/方法用于创建实例。 |
-| [lazy_evaluation](creational/lazy_evaluation.py) | lazily-evaluated property pattern in Python |
+| [延迟计算模式](creational/lazy_evaluation.py) | Python 中延迟计算属性。 |
 | [对象池模式](creational/pool.py) | 预实例化并维护一组同类型的实例。|
 | [原型模式](creational/prototype.py) | 使用工厂和克隆创建新实例（当实例化消耗较大时）。|
 
