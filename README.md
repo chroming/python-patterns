@@ -11,7 +11,7 @@ Python 实现的设计模式/风格合集。
 
 __创建型设计模式__:
 
-| Pattern | Description |
+| 设计模式 | 描述 |
 |:-------:| ----------- |
 | [抽象工厂模式](creational/abstract_factory.py) | 将一个泛型函数和一些特定的工厂类结合使用。 |
 | [borg模式](creational/borg.py) | 在实例间共享状态的单例模式。 |
@@ -23,7 +23,7 @@ __创建型设计模式__:
 
 __结构型设计模式__:
 
-| Pattern | Description |
+| 设计模式 | 描述 |
 |:-------:| ----------- |
 | [3-tier](structural/3-tier.py) | data<->business logic<->presentation separation (strict relationships) |
 | [adapter](structural/adapter.py) | adapt one interface to another using a white-list |
@@ -38,7 +38,7 @@ __结构型设计模式__:
 
 __行为型设计模式__:
 
-| Pattern | Description |
+| 设计模式 | 描述 |
 |:-------:| ----------- |
 | [chain](behavioral/chain.py) | apply a chain of successive handlers to try and process the data |
 | [catalog](behavioral/catalog.py) | general methods will call different specialized methods based on construction parameter |
@@ -58,19 +58,19 @@ __行为型设计模式__:
 
 __可测试性设计模式__:
 
-| Pattern | Description |
+| 设计模式 | 描述 |
 |:-------:| ----------- |
 | [setter_injection](dft/setter_injection.py) | the client provides the depended-on object to the SUT via the setter injection (implementation variant of dependency injection) |
 
 __基础模式__:
 
-| Pattern | Description |
+| 设计模式 | 描述 |
 |:-------:| ----------- |
 | [delegation_pattern](fundamental/delegation_pattern.py) | an object handles a request by delegating to a second object (the delegate) |
 
 __其他__:
 
-| Pattern | Description |
+| 设计模式 | 描述 |
 |:-------:| ----------- |
 | [blackboard](other/blackboard.py) | architectural model, assemble different sub-system knowledge to build a solution, AI approach - non gang of four pattern |
 | [graph_search](other/graph_search.py) | graphing algorithms - non gang of four pattern |
