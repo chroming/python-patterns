@@ -4,11 +4,14 @@
 """
 *TL;DR80
 Separates presentation, application processing, and data management functions.
+
+* 一句话总结
+分离表现层，应用逻辑，数据管理功能。
 """
 
 
 class Data(object):
-    """ Data Store Class """
+    """ 数据存储类 """
 
     products = {
         'milk': {'price': 1.50, 'quantity': 10},
@@ -22,7 +25,7 @@ class Data(object):
 
 
 class BusinessLogic(object):
-    """ Business logic holding data store instances """
+    """ 业务逻辑包含了数据存储实例 """
 
     data = Data()
 
@@ -34,7 +37,7 @@ class BusinessLogic(object):
 
 
 class Ui(object):
-    """ UI interaction class """
+    """ UI 交互类 """
 
     def __init__(self):
         self.business_logic = BusinessLogic()

@@ -25,8 +25,8 @@ __结构型设计模式__:
 
 | 设计模式 | 描述 |
 |:-------:| ----------- |
-| [3-tier](structural/3-tier.py) | data<->business logic<->presentation separation (strict relationships) |
-| [adapter](structural/adapter.py) | adapt one interface to another using a white-list |
+| [三层架构](structural/3-tier.py) | 数据<->业务逻辑<->展示三层分离。|
+| [adapter](structural/adapter.py) | adapt one interface to another using a ∏te-list |
 | [bridge](structural/bridge.py) | a client-provider middleman to soften interface changes |
 | [composite](structural/composite.py) | lets clients treat individual objects and compositions uniformly |
 | [decorator](structural/decorator.py) | wrap functionality with other functionality in order to affect outputs |
