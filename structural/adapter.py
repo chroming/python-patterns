@@ -2,33 +2,26 @@
 # -*- coding: utf-8 -*-
 
 """
-*What is this pattern about?
-The Adapter pattern provides a different interface for a class. We can
-think about it as a cable adapter that allows you to charge a phone
-somewhere that has outlets in a different shape. Following this idea,
-the Adapter pattern is useful to integrate classes that couldn't be
-integrated due to their incompatible interfaces.
+* 解释
+适配器模式将类转换为另一种接口。我们可以将其看作允许你使用不兼容插口给你手机充电的电源转换器。
+以这种概念来考虑，适配器模式可以整合因接口不兼容原本无法整合的类。
 
-*What does this example do?
+* 例子含义
+示例中包含不同的实物类（Dog，Cat，Human，Car），会发出不同的声音。
+接口类将这些原本不同的声音方法转换为另一种通用方法，
+因此这些不同的方法最后都可以用 make_noise 这一方法名调用。
 
-The example has classes that represent entities (Dog, Cat, Human, Car)
-that make different noises. The Adapter class provides a different
-interface to the original methods that make such noises. So the
-original interfaces (e.g., bark and meow) are available under a
-different name: make_noise.
-
-*Where is the pattern used practically?
-The Grok framework uses adapters to make objects work with a
-particular API without modifying the objects themselves:
+* 用处
+Grok 框架使用接口模式以在不修改对象的前提下提供另一种API：
 http://grok.zope.org/doc/current/grok_overview.html#adapters
 
-*References:
+* 参考资料
 http://ginstrom.com/scribbles/2008/11/06/generic-adapter-class-in-python/
 https://sourcemaking.com/design_patterns/adapter
 http://python-3-patterns-idioms-test.readthedocs.io/en/latest/ChangeInterface.html#adapter
 
-*TL;DR80
-Allows the interface of an existing class to be used as another interface.
+* 一句话总结
+允许一个已有类的接口以另一种方式调用。
 """
 
 
@@ -70,8 +63,8 @@ class Car(object):
 
 class Adapter(object):
     """
-    Adapts an object by replacing methods.
-    Usage:
+    通过替换方法适配一个对象。
+    使用方式:
     dog = Dog()
     dog = Adapter(dog, make_noise=dog.bark)
 
