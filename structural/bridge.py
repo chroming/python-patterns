@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-*References:
+*参考资料
 http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge_Pattern#Python
 
-*TL;DR80
-Decouples an abstraction from its implementation.
+*一句话总结
+解耦抽象与实现。
 """
 
 

@@ -27,7 +27,7 @@ __结构型设计模式__:
 |:-------:| ----------- |
 | [三层架构](structural/3-tier.py) | 数据<->业务逻辑<->展示三层分离。|
 | [适配器模式](structural/adapter.py) | 使用转换列表将一个接口转换为另一个。|
-| [bridge](structural/bridge.py) | a client-provider middleman to soften interface changes |
+| [桥接模式](structural/bridge.py) | 使用客户端中间层以缓和接口变更的影响。|
 | [composite](structural/composite.py) | lets clients treat individual objects and compositions uniformly |
 | [decorator](structural/decorator.py) | wrap functionality with other functionality in order to affect outputs |
 | [facade](structural/facade.py) | use one class as an API to a number of others |
