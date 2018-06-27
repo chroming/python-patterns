@@ -29,7 +29,7 @@ __结构型设计模式__:
 | [适配器模式](structural/adapter.py) | 使用转换列表将一个接口转换为另一个。|
 | [桥接模式](structural/bridge.py) | 使用客户端中间层以缓和接口变更的影响。|
 | [composite](structural/composite.py) | lets clients treat individual objects and compositions uniformly |
-| [decorator](structural/decorator.py) | wrap functionality with other functionality in order to affect outputs |
+| [装饰器模式](structural/decorator.py) | 用一个函数装饰另一个函数，以便修改输出。|
 | [facade](structural/facade.py) | use one class as an API to a number of others |
 | [flyweight](structural/flyweight.py) | transparently reuse existing instances of objects with similar/identical state |
 | [front_controller](structural/front_controller.py) | single handler requests coming to the application |

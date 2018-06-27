@@ -2,35 +2,31 @@
 # -*- coding: utf-8 -*-
 
 """
-*What is this pattern about?
-The Decorator pattern is used to dynamically add a new feature to an
-object without changing its implementation. It differs from
-inheritance because the new feature is added only to that particular
-object, not to the entire subclass.
+* 解释
+装饰器模式用于在不修改对象实现的情况下给它动态添加一个新特性。
+这与继承不同，因为它仅仅修改特定对象，而不是全部子类。
 
-*What does this example do?
-This example shows a way to add formatting options (boldface and
-italic) to a text by appending the corresponding tags (<b> and
-<i>). Also, we can see that decorators can be applied one after the other,
-since the original text is passed to the bold wrapper, which in turn
-is passed to the italic wrapper.
+* 例子含义
+示例展示了一种通过附加相应标签（<b>和<i>）来添加格式化选项的方式。
+同时，我们能注意到不同的装饰器可以一个接着一个地作用于同个对象，
+在原始文本被传递给加粗装饰器后接着又被传递给斜体装饰器。
 
-*Where is the pattern used practically?
-The Grok framework uses decorators to add functionalities to methods,
-like permissions or subscription to an event:
+* 用处
+Grok 框架使用装饰器给方法添加功能，比如给事件添加权限或订阅功能：
 http://grok.zope.org/doc/current/reference/decorators.html
 
-*References:
+* 参考资料
 https://sourcemaking.com/design_patterns/decorator
 
-*TL;DR80
-Adds behaviour to object without affecting its class.
+* 一句话总结
+在不修改对象实现的情况下给对象添加功能。
+
 """
 
 from __future__ import print_function
 
 class TextTag(object):
-    """Represents a base text tag"""
+    """基础文本标签"""
     def __init__(self, text):
         self._text = text
 
@@ -39,7 +35,7 @@ class TextTag(object):
 
 
 class BoldWrapper(TextTag):
-    """Wraps a tag in <b>"""
+    """使用<b>装饰标签"""
     def __init__(self, wrapped):
         self._wrapped = wrapped
 
@@ -48,7 +44,7 @@ class BoldWrapper(TextTag):
 
 
 class ItalicWrapper(TextTag):
-    """Wraps a tag in <i>"""
+    """使用<i>装饰标签"""
     def __init__(self, wrapped):
         self._wrapped = wrapped
 
