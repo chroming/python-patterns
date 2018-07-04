@@ -31,7 +31,7 @@ __结构型设计模式__:
 | [composite](structural/composite.py) | lets clients treat individual objects and compositions uniformly |
 | [装饰器模式](structural/decorator.py) | 用一个函数装饰另一个函数，以便修改输出。|
 | [外观模式](structural/facade.py) | 使用一个类作为其他类的接口。|
-| [flyweight](structural/flyweight.py) | transparently reuse existing instances of objects with similar/identical state |
+| [享元模式](structural/flyweight.py) | 透明地恢复对象的已有实例并附带相似/相同状态。|
 | [front_controller](structural/front_controller.py) | single handler requests coming to the application |
 | [mvc](structural/mvc.py) | model<->view<->controller (non-strict relationships) |
 | [proxy](structural/proxy.py) | an object funnels operations to something else |
