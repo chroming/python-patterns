@@ -2,41 +2,35 @@
 # -*- coding: utf-8 -*-
 
 """
-*What is this pattern about?
-The Facade pattern is a way to provide a simpler unified interface to
-a more complex system. It provides an easier way to access functions
-of the underlying system by providing a single entry point.
-This kind of abstraction is seen in many real life situations. For
-example, we can turn on a computer by just pressing a button, but in
-fact there are many procedures and operations done when that happens
-(e.g., loading programs from disk to memory). In this case, the button
-serves as an unified interface to all the underlying procedures to
-turn on a computer.
+* 解释
+外观模式为复杂系统提供简单的统一接口。它通过单个接入点提供访问基础系统的简易方式。
+这种抽象在生活中很常见。比如我们只需按一下电脑的开关就可以启动电脑，但实际上，背后有许多程序和
+操作会在启动时完成（比如，将程序从磁盘中载入内存）。也就是说，这个按钮就是一个启动电脑的统一接口。
 
-*What does this example do?
-The code defines three classes (TC1, TC2, TC3) that represent complex
-parts to be tested. Instead of testing each class separately, the
-TestRunner class acts as the facade to run all tests with only one
-call to the method runAll. By doing that, the client part only needs
-to instantiate the class TestRunner and call the runAll method.
-As seen in the example, the interface provided by the Facade pattern
-is independent from the underlying implementation. Since the client
-just calls the runAll method, we can modify the classes TC1, TC2 or
-TC3 without impact on the way the client uses the system.
+* 例子含义
+示例定义了三个类（TC1, TC2, TC3)代表要被测试的复杂组件。
+TestRunner 类以外观模式运行，通过一个 runAll 方法运行所有测试。
+之后，客户端只需实例化 TestRunner 并调用 runAll 方法即可。
+正如示例中所示，外观模式提供的接口独立于基础实现。
+由于客户端只是单纯调用 runAll 方法，我们可以在不影响客户端调用的情况下
+修改 TC1, TC2, TC3 类。
 
-*Where is the pattern used practically?
-This pattern can be seen in the Python standard library when we use
-the isdir function. Although a user simply uses this function to know
-whether a path refers to a directory, the system makes a few
-operations and calls other modules (e.g., os.stat) to give the result.
+* 用处
+此模式可以在使用Python标准库中的isdir函数时发现。
+尽管用户使用此函数只是简单地想知道一个路径是否是目录，
+但系统在背后仍然做了一些操作，并通过调用一些其他模块来
+获取结果。
 
-*References:
+
+* 参考资料
 https://sourcemaking.com/design_patterns/facade
 https://fkromer.github.io/python-pattern-references/design/#facade
 http://python-3-patterns-idioms-test.readthedocs.io/en/latest/ChangeInterface.html#facade
 
-*TL;DR80
-Provides a simpler unified interface to a complex system.
+
+* 一句话总结
+为复杂系统提供一个简单的统一接口。
+
 """
 
 from __future__ import print_function
@@ -45,7 +39,7 @@ import time
 SLEEP = 0.1
 
 
-# Complex Parts
+# 复杂组件
 class TC1:
 
     def run(self):
@@ -88,7 +82,7 @@ class TC3:
         print(u"Test Finished\n")
 
 
-# Facade
+# 外观模式
 class TestRunner:
 
     def __init__(self):
@@ -101,7 +95,7 @@ class TestRunner:
         [i.run() for i in self.tests]
 
 
-# Client
+# 客户端
 if __name__ == '__main__':
     testrunner = TestRunner()
     testrunner.runAll()
