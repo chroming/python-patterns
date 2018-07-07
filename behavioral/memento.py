@@ -4,8 +4,8 @@
 """
 http://code.activestate.com/recipes/413838-memento-closure/
 
-*TL;DR80
-Provides the ability to restore an object to its previous state.
+*一句话总结
+允许恢复对象的曾经状态。
 """
 
 from copy import copy
@@ -23,9 +23,8 @@ def memento(obj, deep=False):
 
 
 class Transaction(object):
-    """A transaction guard.
-
-    This is, in fact, just syntactic sugar around a memento closure.
+    """交易监控。
+    这个类实际上只是备忘录的语法糖封装。
     """
     deep = False
     states = []
@@ -44,9 +43,9 @@ class Transaction(object):
 
 
 class Transactional(object):
-    """Adds transactional semantics to methods. Methods decorated  with
-
-    @Transactional will rollback to entry-state upon exceptions.
+    """
+    给方法添加交易监控功能。
+    使用 @Transactional 装饰器的方法会在遇到错误时自动回滚。
     """
 
     def __init__(self, method):

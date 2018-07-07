@@ -3,9 +3,8 @@
 
 """
 http://web.archive.org/web/20120309135549/http://dpip.testingperspective.com/?p=28
-
-*TL;DR80
-Encapsulates how a set of objects interact.
+*一句话总结
+封装一系列对象的作用方法。
 """
 
 import random

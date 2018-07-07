@@ -3,10 +3,10 @@
 
 """
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
-Implementation of the iterator pattern with a generator
+使用生成器实现迭代模式。
 
-*TL;DR80
-Traverses a container and accesses the container's elements.
+*一句话总结
+遍历一个容器并访问其中所有元素。
 """
 
 from __future__ import print_function

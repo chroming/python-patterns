@@ -9,8 +9,7 @@ class RegistryHolder(type):
     def __new__(cls, name, bases, attrs):
         new_cls = type.__new__(cls, name, bases, attrs)
         """
-            Here the name of the class is used as key but it could be any class
-            parameter.
+            此处使用类名作为键，你也可以用其他任何类的参数。
         """
         cls.REGISTRY[new_cls.__name__] = new_cls
         return new_cls
@@ -23,9 +22,8 @@ class RegistryHolder(type):
 class BaseRegisteredClass(object):
     __metaclass__ = RegistryHolder
     """
-        Any class that will inherits from BaseRegisteredClass will be included
-        inside the dict RegistryHolder.REGISTRY, the key being the name of the
-        class and the associated value, the class itself.
+        所有继承 BaseRegisteredClass 的类都包含内置的字典 RegistryHolder.REGISTRY，
+        键是类名，值是类本身。
     """
     pass
 

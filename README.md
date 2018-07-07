@@ -40,16 +40,16 @@ __行为型设计模式__:
 
 | 设计模式 | 描述 |
 |:-------:| ----------- |
-| [责任链模式](behavioral/chain.py) | 提供连续的处理链以尝试处理数据。 |
-| [目录模式](behavioral/catalog.py) | 通用函数会根据初始化时的参数选择对应的不同方法。|
-| [链式调用](behavioral/chaining_method.py) | 方法的返回值可继续调用下一个对象方法。|
-| [命令模式](behavioral/command.py) | 将命令和参数打包起来供随后调用。|
-| [iterator](behavioral/iterator.py) | traverse a container and access the container's elements |
-| [mediator](behavioral/mediator.py) | an object that knows how to connect other objects and act as a proxy |
-| [memento](behavioral/memento.py) | generate an opaque token that can be used to go back to a previous state |
-| [observer](behavioral/observer.py) | provide a callback for notification of events/changes to data |
-| [publish_subscribe](behavioral/publish_subscribe.py) | a source syndicates events/data to 0+ registered listeners |
-| [registry](behavioral/registry.py) | keep track of all subclasses of a given class |
+| [责任链模式](behavioral/chain.py) | 提供连续的处理链以尝试处理数据 |
+| [目录模式](behavioral/catalog.py) | 通用函数会根据初始化时的参数选择对应的不同方法 |
+| [链式调用](behavioral/chaining_method.py) | 方法的返回值可继续调用下一个对象方法 |
+| [命令模式](behavioral/command.py) | 将命令和参数打包起来供随后调用 |
+| [迭代模式](behavioral/iterator.py) | 遍历一个容器并访问其中所有元素 |
+| [中介者模式](behavioral/mediator.py) | 一个对象知道如何连接其他对象，行为类似于代理 |
+| [备忘录模式](behavioral/memento.py) | 生成一个不透明的token可用于恢复对象到上一个状态 |
+| [观察者模式](behavioral/observer.py) | 为事件/数据修改提供一个回调通知 |
+| [发布/订阅模式](behavioral/publish_subscribe.py) | 将资源的事件/数据与已注册的监听者联合 |
+| [注册模式](behavioral/registry.py) | 跟踪一个类的所有子类 |
 | [specification](behavioral/specification.py) |  business rules can be recombined by chaining the business rules together using boolean logic |
 | [state](behavioral/state.py) | logic is organized into a discrete number of potential states and the next state that can be transitioned to |
 | [strategy](behavioral/strategy.py) | selectable operations over the same data |

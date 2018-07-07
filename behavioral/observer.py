@@ -4,8 +4,8 @@
 """
 http://code.activestate.com/recipes/131499-observer-pattern/
 
-*TL;DR80
-Maintains a list of dependents and notifies them of any state changes.
+*一句话总结
+维护一系列依赖，并在状态改变时通知他们。
 """
 
 from __future__ import print_function
