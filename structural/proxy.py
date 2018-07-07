@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-*TL;DR80
-Provides an interface to resource that is expensive to duplicate.
+*一句话总结
+为复制成本较高的资源提供一个接口。
 """
 
 from __future__ import print_function

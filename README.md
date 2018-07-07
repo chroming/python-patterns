@@ -34,7 +34,7 @@ __结构型设计模式__:
 | [享元模式](structural/flyweight.py) | 透明地恢复对象的已有实例并附带相似/相同状态。|
 | [front_controller](structural/front_controller.py) | single handler requests coming to the application |
 | [mvc](structural/mvc.py) | model<->view<->controller (non-strict relationships) |
-| [proxy](structural/proxy.py) | an object funnels operations to something else |
+| [代理模式](structural/proxy.py) | 一个将操作指向其他对象的对象。|
 
 __行为型设计模式__:
 
