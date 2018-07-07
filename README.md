@@ -34,7 +34,7 @@ __结构型设计模式__:
 | [享元模式](structural/flyweight.py) | 透明地恢复对象的已有实例并附带相似/相同状态。|
 | [front_controller](structural/front_controller.py) | single handler requests coming to the application |
 | [mvc](structural/mvc.py) | model<->view<->controller (non-strict relationships) |
-| [代理模式](structural/proxy.py) | 一个将操作指向其他对象的对象。|
+| [代理模式](structural/proxy.py) | 一个将操作指向其他对象的对象 |
 
 __行为型设计模式__:
 
@@ -50,11 +50,11 @@ __行为型设计模式__:
 | [观察者模式](behavioral/observer.py) | 为事件/数据修改提供一个回调通知 |
 | [发布/订阅模式](behavioral/publish_subscribe.py) | 将资源的事件/数据与已注册的监听者联合 |
 | [注册模式](behavioral/registry.py) | 跟踪一个类的所有子类 |
-| [specification](behavioral/specification.py) |  business rules can be recombined by chaining the business rules together using boolean logic |
+| [规格模式](behavioral/specification.py) | 通过布尔逻辑相互链接以重组业务逻辑 |
 | [state](behavioral/state.py) | logic is organized into a discrete number of potential states and the next state that can be transitioned to |
-| [strategy](behavioral/strategy.py) | selectable operations over the same data |
-| [template](behavioral/template.py) | an object imposes a structure but takes pluggable components |
-| [visitor](behavioral/visitor.py) | invoke a callback for all items of a collection |
+| [策略模式](behavioral/strategy.py) | 对同个数据可选不同操作 |
+| [模板模式](behavioral/template.py) | 类实现主体结构并允许扩展组件 |
+| [访问者模式](behavioral/visitor.py) | 为集合中所有元素调用回调 |
 
 __可测试性设计模式__:
 

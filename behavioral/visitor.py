@@ -4,8 +4,8 @@
 """
 http://peter-hoffmann.com/2010/extrinsic-visitor-pattern-python-inheritance.html
 
-*TL;DR80
-Separates an algorithm from an object structure on which it operates.
+*一句话总结
+将对象的算法与结构分离。
 """
 
 

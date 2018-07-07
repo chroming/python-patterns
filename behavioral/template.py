@@ -3,27 +3,26 @@
 
 """
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
+一个使用 Python 模板模式的例子。
 
-An example of the Template pattern in Python
-
-*TL;DR80
-Defines the skeleton of an algorithm, deferring steps to subclasses.
+*一句话总结
+定义算法主体结构，具体步骤在子类中实现。
 """
 
 ingredients = "spam eggs apple"
 line = '-' * 10
 
 
-# Skeletons
+# 主体结构
 def iter_elements(getter, action):
-    """Template skeleton that iterates items"""
+    """迭代对象的模板结构"""
     for element in getter():
         action(element)
         print(line)
 
 
 def rev_elements(getter, action):
-    """Template skeleton that iterates items in reverse order"""
+    """反向迭代对象的模板结构"""
     for element in getter()[::-1]:
         action(element)
         print(line)
@@ -54,13 +53,13 @@ def make_template(skeleton, getter, action):
         skeleton(getter, action)
     return template
 
-# Create our template functions
+# 创建模板方法
 templates = [make_template(s, g, a)
              for g in (get_list, get_lists)
              for a in (print_item, reverse_item)
              for s in (iter_elements, rev_elements)]
 
-# Execute them
+# 执行
 for template in templates:
     template()
 

@@ -4,8 +4,8 @@
 """
 @author: Gordeev Andrey <gordeev.and.and@gmail.com>
 
-*TL;DR80
-Provides recombination business logic by chaining together using boolean logic.
+*一句话总结
+通过布尔逻辑相互链接以重组业务逻辑。
 """
 
 from abc import abstractmethod

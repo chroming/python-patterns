@@ -4,15 +4,12 @@
 """
 http://stackoverflow.com/questions/963965/how-is-this-strategy-pattern
  -written-in-python-the-sample-in-wikipedia
-In most of other languages Strategy pattern is implemented via creating some
-base strategy interface/abstract class and subclassing it with a number of
-concrete strategies (as we can see at
-http://en.wikipedia.org/wiki/Strategy_pattern), however Python supports
-higher-order functions and allows us to have only one class and inject
-functions into it's instances, as shown in this example.
+在许多其他语言中策略模式是通过创建策略基类/接口并子类化大量具体策略类来实现的（
+可见http://en.wikipedia.org/wiki/Strategy_pattern），然而 Python 支持高级函数，
+允许我们仅使用单个类并传入不同函数，正如示例那样。
 
-*TL;DR80
-Enables selecting an algorithm at runtime.
+*一句话总结
+允许在运行时选择算法。
 """
 
 import types
