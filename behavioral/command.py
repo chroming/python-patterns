@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-*TL;DR80
-Encapsulates all information needed to perform an action or trigger an event.
+*一句话总结
+将执行一个动作或触发一个事件所需要的所有信息封装起来。
 """
 
 from __future__ import print_function

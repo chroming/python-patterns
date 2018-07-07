@@ -42,8 +42,8 @@ __行为型设计模式__:
 |:-------:| ----------- |
 | [责任链模式](behavioral/chain.py) | 提供连续的处理链以尝试处理数据。 |
 | [目录模式](behavioral/catalog.py) | 通用函数会根据初始化时的参数选择对应的不同方法。|
-| [chaining_method](behavioral/chaining_method.py) | continue callback next object method |
-| [command](behavioral/command.py) | bundle a command and arguments to call later |
+| [链式调用](behavioral/chaining_method.py) | 方法的返回值可继续调用下一个对象方法。|
+| [命令模式](behavioral/command.py) | 将命令和参数打包起来供随后调用。|
 | [iterator](behavioral/iterator.py) | traverse a container and access the container's elements |
 | [mediator](behavioral/mediator.py) | an object that knows how to connect other objects and act as a proxy |
 | [memento](behavioral/memento.py) | generate an opaque token that can be used to go back to a previous state |
