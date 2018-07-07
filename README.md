@@ -40,8 +40,8 @@ __行为型设计模式__:
 
 | 设计模式 | 描述 |
 |:-------:| ----------- |
-| [chain](behavioral/chain.py) | apply a chain of successive handlers to try and process the data |
-| [catalog](behavioral/catalog.py) | general methods will call different specialized methods based on construction parameter |
+| [责任链模式](behavioral/chain.py) | 提供连续的处理链以尝试处理数据。 |
+| [目录模式](behavioral/catalog.py) | 通用函数会根据初始化时的参数选择对应的不同方法。|
 | [chaining_method](behavioral/chaining_method.py) | continue callback next object method |
 | [command](behavioral/command.py) | bundle a command and arguments to call later |
 | [iterator](behavioral/iterator.py) | traverse a container and access the container's elements |

@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-A class that uses different static function depending of a parameter passed in
-init. Note the use of a single dictionary instead of multiple conditions
+一个根据初始时传入的参数使用不同静态函数处理的类。
+注意，此模式使用单个字典来选择而不是条件判断。
 """
 
 __author__ = "Ibrahim Diop <ibrahim@sikilabs.com>"

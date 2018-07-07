@@ -2,22 +2,19 @@
 # -*- coding: utf-8 -*-
 
 """
-*What is this pattern about?
-This pattern aims to decouple the senders of a request from its
-receivers. It does this by allowing a request to move through chained
-objects until it is handled by an appropriate receiver.
+* 解释
+此模式用于解耦请求的发送方与接收方。
+实现方式为允许请求在责任链对象间传递，直到被恰当的接收方处理。
 
-This is useful as it reduces the number of connections between objects,
-since the sender does not need explicit knowledge of the handler, and
-the receiver won't need to refer to all potential receivers, but keeps
-a reference to a single successor.
+这在减少对象间的连接数量时比较有用，因为发送发无需确切地知道接收方是谁，
+且接收方无需指向所有可能的其他接收方，仅仅指向一个成功的即可。
 
-*References:
+* 参考资料
 http://www.dabeaz.com/coroutines/
 
-*TL;DR80
-Allow a request to pass down a chain of objects until an object handles
-the request.
+
+* 一句话总结
+允许请求在责任链对象间传递，直到被恰当的接收方处理。
 """
 
 from contextlib import contextmanager
